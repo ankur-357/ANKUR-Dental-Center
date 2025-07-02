@@ -8,7 +8,6 @@ import {
     DollarSign,
     CheckCircle,
     Clock,
-    TrendingUp,
     FileText
 } from 'lucide-react';
 import { format } from 'date-fns';

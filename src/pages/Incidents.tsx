@@ -25,7 +25,7 @@ const Incidents: React.FC = () => {
         comments: '',
         appointmentDate: '',
         cost: '',
-        status: 'Pending' as const,
+        status: 'Pending' as 'Pending' | 'Completed' | 'Cancelled',
         treatment: '',
         nextDate: ''
     });
