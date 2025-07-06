@@ -81,8 +81,8 @@ simulated using localStorage with no backend dependencies.
 1. Clone the repository:
 
 ```bash
-git clone <repository-url>
-cd dental-center-management
+git clone https://github.com/ankur-357/ANKUR-Dental-Center.git
+cd ANKUR-Dental-Center
 ```
 
 2. Install dependencies:
