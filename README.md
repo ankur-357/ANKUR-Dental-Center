@@ -81,8 +81,8 @@ simulated using localStorage with no backend dependencies.
 1. Clone the repository:
 
 ```bash
-git clone <repository-url>
-cd dental-center-management
+git clone https://github.com/ankur-357/ANKUR-Dental-Center.git
+cd ANKUR-Dental-Center
 ```
 
 2. Install dependencies:
@@ -116,13 +116,14 @@ npm run preview
 ```
 src/
 ├── components/
-│   ├── ui/           # Reusable UI components
-│   └── layout/       # Layout components
-├── context/          # React Context for state management
-├── pages/            # Page components
-├── types/            # TypeScript type definitions
-├── utils/            # Utility functions
-└── App.tsx          # Main application component
+|   ├──atoms/         
+│   ├── ui/           
+│   └── layout/       
+├── context/          
+├── pages/           
+├── types/          
+├── utils/          
+└── App.tsx       
 ```
 
 ## 💾 Data & Storage
@@ -186,52 +187,6 @@ The application is fully responsive and works on:
 - Tablets
 - Mobile phones
 
-## 🚀 Deployment
-
-### Vercel Deployment
-
-1. Install Vercel CLI:
-
-```bash
-npm i -g vercel
-```
-
-2. Deploy:
-
-```bash
-vercel
-```
-
-### Netlify Deployment
-
-1. Build the project:
-
-```bash
-npm run build
-```
-
-2. Upload the `dist` folder to Netlify
-
-### GitHub Pages
-
-1. Add to package.json:
-
-```json
-{
-  "homepage": "https://yourusername.github.io/repo-name",
-  "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
-  }
-}
-```
-
-2. Deploy:
-
-```bash
-npm run deploy
-```
-
 ## 🧪 Development
 
 ### Available Scripts
@@ -272,13 +227,34 @@ npm run deploy
 - **Comprehensive dashboard** with analytics
 - **Modern UI/UX** with TailwindCSS
 
-## 🤝 Contributing
+## 🧠 Bonus Features that can be added:
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
+### 🤖 Chatbot for Patient Queries
+
+An interactive chatbot on the patient dashboard helps answer common queries such as:
+
+* "When is my next appointment?"
+* "How much have I paid so far?"
+* "What does my treatment history look like?"
+
+### 🦷 Image-Based Tooth Condition Prediction
+
+Patients or dentists can upload images of dental conditions (e.g., a tooth scan or photo). The app simulates AI-based diagnosis by predicting:
+
+* Possible early-stage cavity
+* Gum inflammation
+* Recommendation for further examination
+
+
+### 💬 Patient Sentiment Tracker
+
+After completing a treatment, patients can leave feedback. The system performs basic sentiment analysis to classify feedback as:
+
+* Positive 😊
+* Neutral 😐
+* Negative 😟
+
+This helps dentists gauge patient satisfaction and improve service quality.
 
 ## 📄 License
 
