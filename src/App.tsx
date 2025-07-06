@@ -31,14 +31,14 @@ const ProtectedRoute: React.FC<{ children: React.ReactNode; allowedRoles?: strin
   return <>{children}</>;
 };
 
-// Development helper - reset data button (only in development)
+// Reset data button for testing
 const ResetDataButton: React.FC = () => {
   const handleReset = () => {
     resetToMockData();
     window.location.reload();
   };
 
-  // Only show in development
+  // Only show in development mode
   if (import.meta.env.MODE !== 'development') {
     return null;
   }

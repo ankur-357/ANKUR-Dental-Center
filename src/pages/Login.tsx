@@ -157,14 +157,14 @@ const Login: React.FC = () => {
                                     <User className="h-4 w-4 mr-2 text-blue-600" />
                                     <span className="text-sm font-medium text-gray-900">Admin (Dentist)</span>
                                 </div>
-                                <p className="text-xs text-gray-600 font-mono">dr.ankur@entnt.in / admin123</p>
+                                <p className="text-xs text-gray-600 font-mono">admin@entnt.in / admin123</p>
                             </div>
                             <div className="bg-white rounded-lg p-3 border border-purple-200">
                                 <div className="flex items-center mb-1">
                                     <Users className="h-4 w-4 mr-2 text-purple-600" />
                                     <span className="text-sm font-medium text-gray-900">Patient</span>
                                 </div>
-                                <p className="text-xs text-gray-600 font-mono">arjun.sharma@entnt.in / patient123</p>
+                                <p className="text-xs text-gray-600 font-mono">john@entnt.in / patient123</p>
                             </div>
                         </div>
                     </div>
@@ -192,9 +192,6 @@ const Login: React.FC = () => {
                         {/* Feature List */}
                         <div className="space-y-6">
                             <div className="flex items-center">
-                                <div className="flex-shrink-0 w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center mr-4">
-                                    <Users className="h-6 w-6 text-white" />
-                                </div>
                                 <div>
                                     <h3 className="text-lg font-semibold">Patient Management</h3>
                                     <p className="text-blue-100">Comprehensive patient records and history tracking</p>
@@ -202,9 +199,6 @@ const Login: React.FC = () => {
                             </div>
 
                             <div className="flex items-center">
-                                <div className="flex-shrink-0 w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center mr-4">
-                                    <Calendar className="h-6 w-6 text-white" />
-                                </div>
                                 <div>
                                     <h3 className="text-lg font-semibold">Appointment Scheduling</h3>
                                     <p className="text-blue-100">Efficient calendar management and appointment tracking</p>
@@ -212,9 +206,6 @@ const Login: React.FC = () => {
                             </div>
 
                             <div className="flex items-center">
-                                <div className="flex-shrink-0 w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center mr-4">
-                                    <DollarSign className="h-6 w-6 text-white" />
-                                </div>
                                 <div>
                                     <h3 className="text-lg font-semibold">Financial Tracking</h3>
                                     <p className="text-blue-100">Revenue analytics and treatment cost management</p>

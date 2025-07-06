@@ -9,7 +9,7 @@ const STORAGE_KEYS = {
     IS_AUTHENTICATED: 'dental_is_authenticated'
 };
 
-// Initialize localStorage with mock data if empty
+// Load mock data if storage is empty
 export const initializeStorage = () => {
     if (!localStorage.getItem(STORAGE_KEYS.USERS)) {
         localStorage.setItem(STORAGE_KEYS.USERS, JSON.stringify(mockUsers));
@@ -22,7 +22,7 @@ export const initializeStorage = () => {
     }
 };
 
-// Get data from localStorage
+// Read data from storage
 export const getUsers = (): User[] => {
     const users = localStorage.getItem(STORAGE_KEYS.USERS);
     return users ? JSON.parse(users) : [];
@@ -47,7 +47,7 @@ export const isAuthenticated = (): boolean => {
     return localStorage.getItem(STORAGE_KEYS.IS_AUTHENTICATED) === 'true';
 };
 
-// Set data to localStorage
+// Save data to storage
 export const setUsers = (users: User[]) => {
     localStorage.setItem(STORAGE_KEYS.USERS, JSON.stringify(users));
 };
@@ -70,7 +70,7 @@ export const setCurrentUser = (user: User | null) => {
     }
 };
 
-// CRUD operations
+// Database operations
 export const addPatient = (patient: Patient) => {
     const patients = getPatients();
     patients.push(patient);
@@ -118,13 +118,13 @@ export const deleteIncident = (incidentId: string) => {
     setIncidents(filteredIncidents);
 };
 
-// Clear all data (for logout)
+// Clear user session
 export const clearAuthData = () => {
     localStorage.removeItem(STORAGE_KEYS.CURRENT_USER);
     localStorage.setItem(STORAGE_KEYS.IS_AUTHENTICATED, 'false');
 };
 
-// Reset all data to mock data (for development/testing)
+// Reset to default data
 export const resetToMockData = () => {
     localStorage.setItem(STORAGE_KEYS.USERS, JSON.stringify(mockUsers));
     localStorage.setItem(STORAGE_KEYS.PATIENTS, JSON.stringify(mockPatients));

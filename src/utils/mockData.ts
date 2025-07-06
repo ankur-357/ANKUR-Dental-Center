@@ -51,13 +51,13 @@ export const mockIncidents: Incident[] = [
     {
         id: "i1",
         patientId: "p1",
-        title: "Toothache (दांत में दर्द)",
+        title: "Toothache",
         description: "Severe pain in lower right molar, started after eating sweets.",
         comments: "Patient prefers ayurvedic pain relief. Suggested clove oil as temporary relief.",
         appointmentDate: "2025-01-15T10:00:00",
         cost: 1200,
         status: "Completed",
-        treatment: "Root canal treatment (RCT) performed. Prescribed antibiotics.",
+        treatment: "Root canal treatment performed. Prescribed antibiotics.",
         nextDate: "2025-02-15T10:00:00",
         files: [
             { name: "invoice.pdf", url: "data:application/pdf;base64,JVBERi0xLjQKJcOkw7zDtsO", type: "application/pdf", size: 1024 },
@@ -98,7 +98,7 @@ export const mockIncidents: Incident[] = [
         id: "i4",
         patientId: "p1",
         title: "Follow-up Appointment",
-        description: "Post-RCT checkup. Healing well, no pain reported.",
+        description: "Post-treatment checkup. Healing well, no pain reported.",
         comments: "Patient asked about dietary restrictions. Suggested soft food for 3 days.",
         appointmentDate: "2025-02-15T10:00:00",
         status: "Pending",
@@ -107,7 +107,7 @@ export const mockIncidents: Incident[] = [
     {
         id: "i5",
         patientId: "p4",
-        title: "Emergency Visit (Tooth Broken)",
+        title: "Emergency Visit",
         description: "Accidental fall at home. Upper incisor chipped.",
         comments: "Patient was anxious. Provided reassurance and pain relief.",
         appointmentDate: "2025-01-30T16:00:00",
@@ -135,7 +135,6 @@ export const mockIncidents: Incident[] = [
             { name: "post_op_instructions.pdf", url: "data:application/pdf;base64,JVBERi0xLjQKJcOkw7zDtsO", type: "application/pdf", size: 512 }
         ]
     },
-    // Additional appointments to create more diverse top patients
     {
         id: "i7",
         patientId: "p2",
@@ -230,7 +229,7 @@ export const mockIncidents: Incident[] = [
         id: "i13",
         patientId: "p1",
         title: "Dental Crown",
-        description: "Crown placement for weakened molar after RCT.",
+        description: "Crown placement for weakened molar after root canal.",
         comments: "Patient chose zirconia crown. Advised care for 1 week.",
         appointmentDate: "2025-03-05T16:00:00",
         cost: 8000,
