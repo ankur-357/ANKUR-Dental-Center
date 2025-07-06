@@ -124,6 +124,15 @@ export const clearAuthData = () => {
     localStorage.setItem(STORAGE_KEYS.IS_AUTHENTICATED, 'false');
 };
 
+// Reset all data to mock data (for development/testing)
+export const resetToMockData = () => {
+    localStorage.setItem(STORAGE_KEYS.USERS, JSON.stringify(mockUsers));
+    localStorage.setItem(STORAGE_KEYS.PATIENTS, JSON.stringify(mockPatients));
+    localStorage.setItem(STORAGE_KEYS.INCIDENTS, JSON.stringify(mockIncidents));
+    localStorage.removeItem(STORAGE_KEYS.CURRENT_USER);
+    localStorage.setItem(STORAGE_KEYS.IS_AUTHENTICATED, 'false');
+};
+
 // Get complete app state
 export const getAppState = (): AppState => {
     return {

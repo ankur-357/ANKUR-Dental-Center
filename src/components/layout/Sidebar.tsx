@@ -16,15 +16,15 @@ const Sidebar: React.FC = () => {
     const isActive = (path: string) => location.pathname === path;
 
     const adminNavItems = [
-        { path: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
+        { path: '/', label: 'Dashboard', icon: LayoutDashboard },
         { path: '/patients', label: 'Patients', icon: Users },
         { path: '/appointments', label: 'Appointments', icon: Calendar },
         { path: '/incidents', label: 'Incidents', icon: FileText },
     ];
 
     const patientNavItems = [
-        { path: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
-        { path: '/appointments', label: 'My Appointments', icon: Calendar },
+        { path: '/', label: 'Dashboard', icon: LayoutDashboard },
+        { path: '/patient-appointments', label: 'My Appointments', icon: Calendar },
         { path: '/treatments', label: 'My Treatments', icon: FileText },
     ];
 
