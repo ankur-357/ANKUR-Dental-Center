@@ -9,7 +9,12 @@ import {
     LogOut
 } from 'lucide-react';
 
-const Sidebar: React.FC = () => {
+interface SidebarProps {
+    open: boolean;
+    onClose: () => void;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ open, onClose }) => {
     const { currentUser, logout } = useAuth();
     const location = useLocation();
 
@@ -30,8 +35,11 @@ const Sidebar: React.FC = () => {
 
     const navItems = currentUser?.role === 'Admin' ? adminNavItems : patientNavItems;
 
+    // Hide sidebar on mobile if not open
+    const sidebarClasses = `bg-white shadow-lg w-64 min-h-screen z-40 fixed md:static top-0 left-0 transition-transform duration-200 md:translate-x-0 ${open ? 'translate-x-0' : '-translate-x-full'} md:block`;
+
     return (
-        <div className="bg-white shadow-lg w-64 min-h-screen">
+        <div className={sidebarClasses} style={{ maxWidth: 256 }}>
             <div className="p-6">
                 <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
@@ -63,6 +71,9 @@ const Sidebar: React.FC = () => {
                                             : 'text-gray-700 hover:bg-gray-100'
                                         }
                 `}
+                                    onClick={() => {
+                                        if (window.innerWidth < 768) onClose();
+                                    }}
                                 >
                                     <Icon className="mr-3 h-5 w-5" />
                                     {item.label}
