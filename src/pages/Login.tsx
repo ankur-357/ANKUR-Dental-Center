@@ -10,9 +10,7 @@ import {
     Mail,
     Lock,
     User,
-    Users,
-    Calendar,
-    DollarSign
+    Users
 } from 'lucide-react';
 
 const Login: React.FC = () => {
