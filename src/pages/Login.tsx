@@ -162,7 +162,7 @@ const Login: React.FC = () => {
                             <div className="bg-white rounded-lg p-3 border border-purple-200">
                                 <div className="flex items-center mb-1">
                                     <Users className="h-4 w-4 mr-2 text-purple-600" />
-                                    <span className="text-sm font-medium text-gray-900">Patient</span>
+                                    <span className="text-sm font-medium text-gray-900">Patients</span>
                                 </div>
                                 <p className="text-xs text-gray-600 font-mono">john@entnt.in / patient123</p>
                             </div>
